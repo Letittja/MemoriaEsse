@@ -19,14 +19,14 @@
 #
 # Quartus Prime
 # Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-# Date created = 18:00:50  October 27, 2026
+# Date created = 20:20:13  October 27, 2026
 #
 # -------------------------------------------------------------------------- #
 #
 # Notes:
 #
 # 1) The default values for assignments are stored in the file:
-#		memoriaRAM_assignment_defaults.qdf
+#		memoria_assignment_defaults.qdf
 #    If this file doesn't exist, see file:
 #		assignment_defaults.qdf
 #
@@ -41,18 +41,45 @@ set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
 set_global_assignment -name TOP_LEVEL_ENTITY memoria
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.0.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:00:50  OCTOBER 27, 2026"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:20:13  OCTOBER 27, 2026"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
-set_global_assignment -name VHDL_FILE ../../Documents/GitHub/MemoriaRam/reg8.vhd
-set_global_assignment -name VHDL_FILE ../../Documents/GitHub/MemoriaRam/mux16x1_8bits.vhd
-set_global_assignment -name VHDL_FILE ../../Documents/GitHub/MemoriaRam/memoria.vhd
-set_global_assignment -name VHDL_FILE ../../Documents/GitHub/MemoriaRam/decoder4to16.vhd
+set_global_assignment -name SOURCE_FILE reg8.vhd.bak
+set_global_assignment -name SOURCE_FILE mux16x1_8bits.vhd.bak
+set_global_assignment -name SOURCE_FILE memoria.vhd.bak
+set_global_assignment -name SOURCE_FILE decoder4to16.vhd.bak
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name VHDL_FILE memoria.vhd
+set_global_assignment -name VHDL_FILE decoder4to16.vhd
+set_global_assignment -name VHDL_FILE mux16x1_8bits.vhd
+set_global_assignment -name VHDL_FILE reg8.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_M15 -to addr[3]
+set_location_assignment PIN_B9 -to addr[2]
+set_location_assignment PIN_T8 -to addr[1]
+set_location_assignment PIN_M1 -to addr[0]
+set_location_assignment PIN_E1 -to clear
+set_location_assignment PIN_J15 -to clk
+set_location_assignment PIN_B5 -to D_in[7]
+set_location_assignment PIN_A4 -to D_in[6]
+set_location_assignment PIN_B4 -to D_in[5]
+set_location_assignment PIN_B3 -to D_in[4]
+set_location_assignment PIN_A3 -to D_in[3]
+set_location_assignment PIN_A2 -to D_in[2]
+set_location_assignment PIN_C3 -to D_in[1]
+set_location_assignment PIN_D3 -to D_in[0]
+set_location_assignment PIN_L3 -to D_out[7]
+set_location_assignment PIN_B1 -to D_out[6]
+set_location_assignment PIN_F3 -to D_out[5]
+set_location_assignment PIN_D1 -to D_out[4]
+set_location_assignment PIN_A11 -to D_out[3]
+set_location_assignment PIN_B13 -to D_out[2]
+set_location_assignment PIN_A13 -to D_out[1]
+set_location_assignment PIN_A15 -to D_out[0]
+set_location_assignment PIN_A5 -to enable

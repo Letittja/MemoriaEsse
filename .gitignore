@@ -1,0 +1,24 @@
+# Intel Quartus Prime: arquivos gerados de compilacao e sintese
+/db/
+/incremental_db/
+/output_files/
+/simulation/qsim/work/
+/simulation/qsim/transcript
+/simulation/qsim/vwf_sim_transcript
+
+# Arquivos temporarios, backups e logs
+*.bak
+*.tmp
+*.log
+*.qws
+*.jdi
+*.done
+*.smsg
+*.qmsg
+
+# Arquivos de simulacao gerados (mantenha Waveform.vwf e scripts/fontes)
+*.vcd
+*.vht
+*.vho
+*.sft
+*.xrf
